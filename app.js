@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 
-mongoose.connect('mongodb://localhost/Blogbook');
+mongoose.connect('mongodb://heroku_p8t423bc:8pf33gvktlhkqlrrfctrrhebba@ds125565.mlab.com:25565/heroku_p8t423bc');
 
 app.use(methodOverride('_method'));
 app.use(bodyParser.json());
