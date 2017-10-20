@@ -62,4 +62,8 @@ app.delete('/blogs/:id', (req, res) => {
   Blog.findByIdAndRemove(req.params.id, (err, deletedBlog) => (err) ? console.log(err) : res.redirect(`/blogs`));
 });
 
+
+// Redirect all other routes to index
+app.get('*', (req, res) => res.redirect('/blogs'));
+
 app.listen(process.env.PORT || 3000, () => console.log(`Listening on port 3000`));
